@@ -1,0 +1,404 @@
+:root {
+    --clr-background: #EDEEF5;
+    --clr-chat-background: white;
+    --clr-about-background: #23242C;
+    --clr-main-text: white;
+    --clr-input-text: black;
+    --clr-dark-toggle: black;
+    --clr-chat-heading: #2BD39C;
+    --clr-bot-response: #00A9AB;
+    --clr-usr-response: #3F6ECA;
+    --clr-button: #4573CC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--clr-background);
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100svh;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.about {
+    background-color: var(--clr-about-background);
+    width: 15%;
+    align-items: start;
+    flex-shrink: 0;
+}
+
+.logo {
+    align-content: center;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    padding: 2vw;
+}
+
+.prjName {
+    margin: 0% 1vw;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.7vw;
+    text-align: center;
+}
+
+.prjDesc {
+    color: white;
+    font-family: monospace;
+    font-size: 1.2vw;
+    font-style: italic;
+    text-align: left;
+    margin: 1vw 1vw;
+}
+
+.devAddress {
+    color: white;
+    font-family: monospace;
+    font-style: italic;
+    font-size: 1.2vw;
+    text-align: right;
+    margin: 0vw 1vw;
+}
+
+.chat {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.inner-container {
+    background-color: var(--clr-chat-background);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-innerContainer {
+    margin: 0% 1rem 0% 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-containerHeading {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw;
+    flex-shrink: 0;
+}
+
+#chat-headingContainer {
+    background-color: var(--clr-chat-heading);
+}
+
+.chat-heading {
+    color: var(--clr-main-text);
+    font-size: 2.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: #23242C;
+}
+
+.dark-mode {
+    --clr-background: #212529;
+    --clr-chat-background: #2A2E32;
+    --clr-about-background: #2A2E32;
+    --clr-main-text: white;
+    --clr-input-text: white;
+    --clr-dark-toggle: white;
+    --clr-chat-heading: #535353;
+    --clr-bot-response: #00A9AB;
+    --clr-usr-response: #3F6ECA;
+    --clr-button: #4573CC;
+}
+
+.dark-mode-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.dark-mode-text {
+    color: var(--clr-main-text);
+    font-family: monospace;
+    font-weight: 1000;
+    font-size: 1.5vw;
+    white-space: nowrap;
+}
+
+.dark-mode-toggle {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-circle-half-stroke{
+    color: var(--clr-dark-toggle);
+    font-size: 3vw;
+}
+
+#chat-contentContainer {
+    flex-grow: 1;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#chatbox {
+    height: 100%;
+    overflow-y: auto;
+    padding: 0rem 1.5vw 1.5vw 1.5vw;
+    scroll-behavior: smooth;
+}
+
+.userText {
+    color: var(--clr-main-text);
+    font-family: monospace;
+    font-size: 1.5vw;
+    text-align: right;
+    line-height: 2vw;
+    max-width: 80%;
+    margin-left: auto;
+    background-color: var(--clr-usr-response);
+    margin-top: 1vw;
+    padding: 1.5vw;
+    width: fit-content;
+    border-radius: 20px;
+    overflow-wrap: anywhere;
+}
+
+.botText {
+    color: var(--clr-main-text);
+    font-family: monospace;
+    font-size: 1.5vw;
+    text-align: left;
+    line-height: 2vw;
+    margin-right: auto;
+    max-width: 80%;
+    background-color: var(--clr-bot-response);
+    margin-top: 1vw;
+    padding: 1.5vw;
+    width: fit-content;
+    border-radius: 20px;
+    overflow-wrap: break-word;
+}
+
+#chat-inputContainer {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: fit-content;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 1rem;
+    flex-shrink: 0;
+}
+
+#userInput {
+    width: 95%;
+    display: flex;
+    align-items: center;
+}
+
+.textbox {
+    width: 100%;
+    height: fit-content;
+    border: 3px solid #8FC0D5;
+    border-radius: 16px;
+    align-content: center;
+    padding: 0.5vw 1vw;
+    resize: none;
+}
+
+#textInput {
+    width: 100%;
+    height: auto;
+    border-color: transparent;
+    align-content: center;
+    background-color: transparent;
+    color: var(--clr-input-text);
+    font-family: monospace;
+    font-size: 1.5vw;
+    resize: none;
+    overflow-y: hidden;
+    outline: none;
+}
+
+#buttonInput {
+    align-self: flex-end;
+    align-items: center;
+    appearance: none;
+    background-color: var(--clr-button);
+    border-radius: 50px;
+    border: 2px solid transparent;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: var(--clr-main-text);
+    cursor: pointer;
+    display: inline-flex;
+    fill: currentcolor;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: 1.5vw;
+    font-weight: 500;
+    height: 5vw;
+    justify-content: center;
+    letter-spacing: .25px;
+    line-height: normal;
+    max-width: 100%;
+    overflow: visible;
+    padding: 1vw 1.5vw;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform,opacity;
+    z-index: 0;
+}
+
+#buttonInput:hover {
+    background: #F6F9FE;
+    color: #2BD39C;
+}
+
+#buttonInput:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+#buttonInput:focus {
+    outline: none;
+    border: 2px solid #4285f4;
+}
+
+#buttonInput:not(:disabled) {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+#buttonInput:not(:disabled):hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+#buttonInput:not(:disabled):focus {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+#buttonInput:not(:disabled):active {
+    box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+#buttonInput:disabled {
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+@media (orientation: portrait) {
+    .about {
+        width: 30%;
+    }
+    
+    .logo img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .prjName {
+        margin: 0% 2vh;
+        font-size: 2.5vh;
+    }
+    
+    .prjDesc {
+        font-size: 1.5vh;
+        margin: 1.5vh 2vh 1vh 2vh;
+    }
+    
+    .devAddress {
+        font-size: 1.5vh;
+        margin: 0vh 2vh;
+    }
+
+    .sub-containerHeading {
+        padding: 2vh;
+    }
+    
+    .chat-heading {
+        font-size: 2.5vh;
+    }
+
+    .dark-mode-container {
+        gap: 0.5vh;
+    }
+    
+    .dark-mode-text {
+        font-size: 1.5vh;
+    }
+
+    .fa-circle-half-stroke{
+        font-size: 3vh;
+    }
+
+    #chatbox {
+        padding: 0rem 1.5vh 1.5vh 1.5vh;
+    }
+    
+    .userText {
+        font-size: 1.5vh;
+        line-height: 2vh;
+        margin-top: 1.5vh;
+        padding: 1.5vh;
+        border-radius: 15px;
+        max-width: 90%;
+    }
+    
+    .botText {
+        font-size: 1.5vh;
+        line-height: 2vh;
+        margin-top: 1.5vh;
+        padding: 1.5vh;
+        border-radius: 15px;
+        max-width: 90%;
+    }
+
+    .textbox {
+        padding: 0.5vh 1vh;
+    }
+    
+    #textInput {
+        font-size: 1.5vh;
+    }
+
+    #buttonInput {
+        font-size: 1.5vh;
+        height: 5vh;
+        padding: 1vh 1.5vh;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .about {
+        display: none;
+    }
+}

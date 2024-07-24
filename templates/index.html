@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="about box">
+            <div class="logo">
+                <img src="/static/images/logo.png" alt="logo" width="1000" height="1000">
+                
+                <h1 class="prjName">Kepweng the Natural Remedy Bot Project</h1>
+                <p class="prjDesc">"Within our culture is a rich heritage of natural medicine, which we must not forget as technology advances."</p>
+                <p class="devAddress">-Devs</p>
+                </div>
+        </div>
+        
+        <div class="chat box">
+            <div class="inner-container" id="chat-innerContainer">
+                <div class="sub-containerHeading" id="chat-headingContainer">
+                    <h1 class="chat-heading">Kepweng Health&nbsp;Bot</h1>
+                    <div class="dark-mode-container">
+                        <p class="dark-mode-text">Dark Mode: </p>
+                        <button class="dark-mode-toggle">
+                            <i class="fa-solid fa-circle-half-stroke"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sub-container" id="chat-contentContainer">
+                    <div id="chatbox">
+                        <div class="botText"><span>Hi! I'm {{botname}}. How can I help you today?</span></div>
+                      </div>
+                </div>
+
+                <div class="sub-container" id="chat-inputContainer">
+                    <div id="userInput">
+                        <div class="textbox">
+                            <textarea id="textInput" name="msg" placeholder="Message"></textarea>
+                        </div>
+                        <input id="buttonInput" type="submit" value="Send">
+                      </div>
+                </div>
+
+                <script>
+                    const themeToggleTheme = document.querySelector('.dark-mode-toggle');
+                    themeToggleTheme.addEventListener('click', () => {
+                        document.body.classList.toggle('dark-mode')
+                    })
+                </script>
+
+                <script>
+                    function adjustTextareaHeight() {
+                        var textarea = document.getElementById('textInput');
+                        textarea.style.height = 'auto'; // Reset height to auto
+                        textarea.style.height = (textarea.scrollHeight + 2) + 'px'; // Set height to scrollHeight
+                        textarea.scrollTop = 0;
+                    }
+
+                    function resetTextareaHeight() {
+                        var textarea = document.getElementById('textInput');
+                        textarea.style.height = 'auto'; // Reset height to auto
+                        textarea.scrollTop = 0;
+                    }
+
+                    function scrollChatboxToBottom() {
+                        var chatbox = document.getElementById('chatbox');
+                        chatbox.scrollTop = chatbox.scrollHeight;
+                    }
+                    
+                    $("#textInput").on('input', function() {
+                        adjustTextareaHeight();
+                    });
+
+                    function getBotResponse() {
+                      var rawText = $("#textInput").val();
+                      var userHtml = '<div class="userText"><span>' + rawText + '</span></div>';
+                      
+                      $("#textInput").val("");
+                      $("#chatbox").append(userHtml);
+                      
+                      scrollChatboxToBottom();
+                      
+                      $.get("/get", { msg: rawText }).done(function(data) {
+                        var botHtml = '<div class="botText"><span>' + data + '</span></div>';
+                        $("#chatbox").append(botHtml);
+                        
+                        scrollChatboxToBottom();
+                      });
+                    }
+                    $("#textInput").keypress(function(e) {
+                        adjustTextareaHeight();
+
+                        if ((e.which == 13)){
+                            e.preventDefault();
+                            if (document.getElementById("textInput").value != "") {
+                                getBotResponse();
+                            }
+
+                            resetTextareaHeight();
+                        }
+
+                    });
+                    $("#buttonInput").click(function() {
+                        if (document.getElementById("textInput").value != "") {
+                            getBotResponse();
+                        }
+
+                        resetTextareaHeight()
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
