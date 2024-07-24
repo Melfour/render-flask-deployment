@@ -2,43 +2,151 @@
   "questions": [
     {
       "question": "sore throat",
-      "answer": "A natural remedy for a sore throat is honey mixed with warm water. Honey has antimicrobial\n properties that can help soothe a sore throat."
+      "answer": "A saltwater gargle of 1/4 to 1/2 teaspoon of table salt to 4-8 oz. of warm water can help soothe a sore throat.<br><br>Or drink honey mixed with warm water. Honey has antimicrobial properties that can help soothe a sore throat."
     },
     {
       "question": "headache",
-      "answer": "To relieve a headache naturally, you can use peppermint oil. Applying diluted peppermint oil to\n your temples can provide relief from headaches."
+      "answer": "To relieve a headache naturally, you can use peppermint oil. Applying diluted peppermint oil to your temples can provide relief from headaches.<br><br>Or you can apply crushed lagundi leaves on forehead."
     },
     {
       "question": "indigestion",
-      "answer": "Ginger tea is a natural remedy for indigestion. Ginger helps stimulate digestion and can reduce nausea and bloating"
+      "answer": "Ginger tea is a natural remedy for indigestion. Ginger helps stimulate digestion and can reduce nausea and bloating."
     },
     {
       "question": "improve sleep",
-      "answer": "Drinking chamomile tea before bed can help improve sleep. Chamomile has calming effects that\n can promote better sleep "
+      "answer": "Drinking chamomile tea before bed can help improve sleep. Chamomile has calming effects that can promote better sleep."
     },
     {
-      "question": "boost the immune system",
-      "answer": " Consuming garlic regularly can help boost the immune system. Garlic has antibacterial and\n antiviral properties that support immune health. "
+      "question": "boost immune system",
+      "answer": "Consuming garlic regularly can help boost the immune system. Garlic has antibacterial and antiviral properties that support immune health. "
     },
     {
-      "question": "reduce stress",
-      "answer": "Practicing deep breathing exercises can help reduce stress naturally. Deep breathing can calm\n the nervous system and reduce stress levels "
+      "question": "stress",
+      "answer": "Practicing deep breathing exercises can help reduce stress naturally. Deep breathing can calm the nervous system and reduce stress levels."
     },
     {
       "question": "acne",
-      "answer": "  Applying tea tree oil to acne-prone areas can help reduce acne. Tea tree oil has antibacterial\n properties that can help clear up acne."
-    },
-    {
-      "question": "cold",
-      "answer": "Drinking elderberry syrup can help treat a cold naturally. Elderberry has antiviral properties that\n can help reduce the severity and duration of a cold"
-    },
-    {
-      "question": "muscle pain",
-      "answer": " Applying arnica gel to sore muscles can help relieve muscle pain. Arnica has anti-inflammatory\n properties that can reduce pain and swelling "
+      "answer": "Squeeze a lemon in a bowl and few drops of rose water into it. Apply this mixture with cotton ball on affected areas such as neck or face. <br><br>Or cut an aloe vera shoot in half, scrape the gel out with a spoon and apply it to the affected area."
     },
     {
       "question": "improve digestion",
-      "answer": "Consuming probiotics such as yogurt or kefir can help improve digestion. Probiotics support a\n healthy gut flora and aid in digestion. "
+      "answer": "Consuming probiotics such as yogurt or kefir can help improve digestion. Probiotics support a healthy gut flora and aid in digestion. <br><br>Or drink plenty of fuilds."
+    },
+    {
+      "question": "diarrhea",
+      "answer": "Boil chopped leaves of tsaang gubat or guava in two glasses of water for 15 minutes or until amount of water goes down 1 glass, then cool and strain and drink."
+    },
+    {
+      "question": "stomachache",
+      "answer": "Boil chopped leaves of tsaang gubat in one glasses of water for 15 minutes, then cool and strain and drink."
+    },
+    {
+      "question": "edema",
+      "answer": "Boil chopped leaves of sambong in water for 15 minutes until 1 glassful remains then cool and strain. Divide mixture into three parts, drink one part three times a day."
+    },
+    {
+      "question": "urinary stone",
+      "answer": "Boil chopped leaves of sambong in water for 15 minutes until 1 glassful remains then cool and strain. Divide mixture into three parts, drink one part three times a day."
+    },
+    {
+      "question": "ring worm",
+      "answer": "Apply as a soap to the affected area a pounded fresh but matured leaves of Acapulco 1 to 2 times a day."
+    },
+    {
+      "question": "athlete’s foot",
+      "answer": "Apply as a soap to the affected area a pounded fresh but matured leaves of Acapulco 1 to 2 times a day."
+    },
+    {
+      "question": "scabies",
+      "answer": "Apply as a soap to the affected area a pounded fresh but matured leaves of Acapulco 1 to 2 times a day.<br><br>Or you can prepare a decoction of lagundi leaves, use it to wash and clean the affected area."
+    },
+    {
+      "question": "worm infection",
+      "answer": "Eat raw seeds of niyug-niyogan 2 hours before your last meal of the day. Adults may take 10 seeds, children 4-7 years of age may eat up to 4 seeds only, children 8-9 years old may take 6 seeds, and children 10-12 years old may eat 7 seeds. These seeds may not be given to the children below 4 years old."
+    },
+    {
+      "question": "diabetes",
+      "answer": "Chopped ampalaya leaves and boil 6 tablespoons in 2 glassfuls of water for 15 minutes under low fire, do not cover the pot. Cool and strain then take 1/3 cup 3 times a day after meal."
+    },
+    {
+      "question": "asthma",
+      "answer": "Boil chopped raw fruits or leaves of lagundi in 2 glasses of water, left for 15 minutes until the water left with only 1 glass, then strain and drink."
+    },
+    {
+      "question": "cough",
+      "answer": "Boil chopped raw fruits or leaves of lagundi in 2 glasses of water, left for 15 minutes until the water left with only 1 glass, then strain and drink.<br><br>Or you can get 10 fresh leaves of yerba buena and soak in a glass of hot water. Drink as tea. This acts as expectorant."
+    },
+    {
+      "question": "fever",
+      "answer": "Boil chopped raw fruits or leaves of lagundi in 2 glasses of water, left for 15 minutes until the water left with only 1 glass, then strain and drink."
+    },
+    {
+      "question": "dysentery",
+      "answer": "Boil a handful of lagundi leaves and flowers in a water to produce a glassful of decoction 3 times a day."
+    },
+    {
+      "question": "cold",
+      "answer": "Boil a handful of lagundi leaves and flowers in a water to produce a glassful of decoction 3 times a day.<br><br>Or you can get 10 fresh leaves of yerba buena and soak in a glass of hot water. Drink as tea. This acts as expectorant."
+    },
+    {
+      "question": "gas pain",
+      "answer": "Boil a handful of lagundi leaves and flowers in 2 glasses of water to produce a glassful of decoction and drink 3 times a day.<br><br>Or you may use yerba buena leaves."
+    },
+    {
+      "question": "menstrual pain",
+      "answer": "Boil a handful of lagundi leaves and flowers in 2 glasses of water to produce a glassful of decoction and drink 3 times a day.<br><br>Or you may use yerba buena leaves."
+    },
+    {
+      "question": "dermatitis",
+      "answer": "Prepare a decoction of lagundi leaves, use it to wash and clean the affected area."
+    },
+    {
+      "question": "eczema",
+      "answer": "Prepare a decoction of lagundi leaves, use it to wash and clean the affected area."
+    },
+    {
+      "question": "wound",
+      "answer": "Prepare a decoction of lagundi or guava leaves, use it to wash and clean the affected area."
+    },
+    {
+      "question": "rheumatism",
+      "answer": " Wash 1 and 1/2 cup of ulasimang bato or pansit-pansitan leaves well, and boil in 2 glassfuls of water over low fire. Do not cover the pot. Cool and strain. Divide into 3 parts and drink each part 3 times a day. You may also eat as salad.<br><br>Or apply pounded lagundi leaves on affected area."
+    },
+    {
+      "question": "sprain",
+      "answer": "Apply pounded lagundi leaves on affected area."
+    },
+    {
+      "question": "rheumatism",
+      "answer": "Apply pounded lagundi leaves on affected area."
+    },
+    {
+      "question": "contusion",
+      "answer": "Apply pounded lagundi leaves on affected area."
+    },
+    {
+      "question": "insect bite",
+      "answer": "Apply pounded lagundi leaves on affected area.<br><br>Or crush yerba buena leaves and apply juice to affected part or pound the leaves until paste like and rub on the affected area."
+    },
+    {
+      "question": "gout",
+      "answer": "Wash 1 and 1/2 cup of ulasimang bato or pansit-pansitan leaves well, and boil in 2 glassfuls of water over low fire. Do not cover the pot. Cool and strain. Divide into 3 parts and drink each part 3 times a day. You may also eat as salad."
+    },
+    {
+      "question": "hypertension",
+      "answer": "Garlic may be fried, roasted, soaked in vinegar for 30 minutes, or balanced in boiled water for 5 minutes. Then take 2 pieces 3 times a day after meals."
+    },
+    {
+      "question": "toothache",
+      "answer": "Pound garlic or guava leaves into small pieces and apply to the affected tooth.<br><br>Or cut plant and squeeze sap of yerba buena, then soak a piece of cotton in the sap and insert in aching tooth cavity. However, before inserting the cotton, mouth must be rinsed by gargling salt solution."
+    },
+    {
+      "question": "nausea",
+      "answer": "Crush leaves of yerba buena and apply at nostrils."
+    },
+    {
+      "question": "fainting",
+      "answer": "Crush leaves of yerba buena and apply at nostrils."
     }
   ]
 }
