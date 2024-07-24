@@ -49,7 +49,7 @@ def get_best_response(user_query: str, vectorizer, model, knowledge_base: dict) 
     closest_questions = [knowledge_base['questions'][i]['question'] for i in top_indices]
     closest_answers = [knowledge_base['questions'][i]['answer'] for i in top_indices]
 
-    if distances.max() < 0.6:
+    if distances.max() < 0.5:
         return f"Sorry, it seems that I do not currently know an answer for your inquiry. The closest I can think of are for: {', '.join(closest_questions)}."
 
     return knowledge_base['questions'][prediction]['answer']
