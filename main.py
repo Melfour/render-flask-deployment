@@ -39,20 +39,43 @@ def correct_spelling(text: str) -> str:
     return corrected_text
 
 def get_best_response(user_query: str, vectorizer, model, knowledge_base: dict) -> str:
+    stripped_query = user_query.strip()
+
+    if not stripped_query:
+        return "Huh?"
+
     corrected_query = correct_spelling(user_query)
     user_query_vec = vectorizer.transform([corrected_query])
     prediction = model.predict(user_query_vec)[0]
 
     distances = model.decision_function(user_query_vec)[0]
-    top_indices = distances.argsort()[-3:][::-1]
+    top_indices = distances.argsort()[-5:][::-1]  # Consider the top 5 instead of 3
 
-    closest_questions = [knowledge_base['questions'][i]['question'] for i in top_indices]
-    closest_answers = [knowledge_base['questions'][i]['answer'] for i in top_indices]
+    # Check the category of the predicted response
+    predicted_category = knowledge_base['questions'][prediction]['category']
 
-    if distances.max() < 0.5:
-        return f"Sorry, it seems that I do not currently know an answer for your inquiry. The closest I can think of are for: {', '.join(closest_questions)}."
+    if predicted_category == 'social':
+        if distances.max() >= 0.6:
+            return knowledge_base['questions'][prediction]['answer']
+        else:
+            return "Sorry, I didn't understand that. Come again?"
 
-    return knowledge_base['questions'][prediction]['answer']
+    else:  # For medical queries
+        # Create a list of medical questions based on the top indices
+        closest_questions = [
+            knowledge_base['questions'][i]['question']
+            for i in top_indices if knowledge_base['questions'][i]['category'] == 'medical'
+        ]
+
+        # Adjust the fallback response logic
+        if distances.max() < 0.8 and closest_questions:
+            return f"Sorry, can you please rephrase your statement? The closest I can think of are for: {', '.join(closest_questions)}."
+
+        if closest_questions:  # Return the best medical answer if found
+            return knowledge_base['questions'][prediction]['answer']
+        
+        # If no relevant questions were found, provide a general fallback response
+        return "Sorry, I couldn't find a relevant answer to your question."
 
 knowledge_base = load_knowledge_base('knowledge_base.json')
 model, vectorizer = train_model(knowledge_base)
