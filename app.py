@@ -3,7 +3,7 @@ from main import model, vectorizer, knowledge_base, get_best_response
 
 app = Flask(__name__)
 
-botname = 'Kepweng'
+botname = 'Remi'
 
 @app.route("/")
 def home():
